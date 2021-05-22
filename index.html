@@ -7,6 +7,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="header">
@@ -16,7 +18,7 @@
                     <img src="images/logo.png" width="125px">
                 </div>
                 <nav>
-                    <ul>
+                    <ul id="Menu_items">
                         <li><a href="">Home</a></li>
                         <li><a href="">Products</a></li>
                         <li><a href="">About</a></li>
@@ -25,7 +27,8 @@
                     </ul>
                 </nav>
                 <img src="images/cart.png" width="30px" height="30px">
-                <img src="images/menu.png" class="menu-icon">
+                <img src="images/menu.png" class="menu-icon" onclick=menutoggle()>
+
             </div>
             <div class="row">
                 <div class="col-2">
@@ -76,10 +79,11 @@
                 <img src="images/product-2.jpg">
                 <h4>Casual Shoes</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
                 </div>
                 <p>$30.00</p>
             </div>
@@ -112,7 +116,7 @@
         <div class="row">
             <div class="col-4">
                 <img src="images/product-5.jpg">
-                <h4> Red Printed T-Shirt</h4>
+                <h4> Casual Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -124,7 +128,7 @@
             </div>
             <div class="col-4">
                 <img src="images/product-6.jpg">
-                <h4>Casual Shoes</h4>
+                <h4>Puma T-Shirt</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -136,7 +140,7 @@
             </div>
             <div class="col-4">
                 <img src="images/product-7.jpg">
-                <h4> Trousers</h4>
+                <h4> Socks</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -148,7 +152,7 @@
             </div>
             <div class="col-4">
                 <img src="images/product-8.jpg">
-                <h4> Blue Printed T-Shirt</h4>
+                <h4> Royal Watch</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -162,7 +166,7 @@
         <div class="row">
             <div class="col-4">
                 <img src="images/product-9.jpg">
-                <h4> Red Printed T-Shirt</h4>
+                <h4> Watch for Boys</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -174,7 +178,7 @@
             </div>
             <div class="col-4">
                 <img src="images/product-10.jpg">
-                <h4>Casual Shoes</h4>
+                <h4>Sports Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -186,7 +190,7 @@
             </div>
             <div class="col-4">
                 <img src="images/product-11.jpg">
-                <h4> Trousers</h4>
+                <h4> Casual Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -198,7 +202,7 @@
             </div>
             <div class="col-4">
                 <img src="images/product-12.jpg">
-                <h4> Blue Printed T-Shirt</h4>
+                <h4> Black Trousers</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -232,6 +236,7 @@
         <div class="small-container">
             <div class="row">
                 <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
                     <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. 
                         lorem Ipsum  has been the industry's standard dummy text ever</p>
                     <div class="rating">
@@ -245,6 +250,7 @@
                     <h3>Sean Parker</h3>
                 </div>
                 <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
                     <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. 
                         lorem Ipsum  has been the industry's standard dummy text ever</p>
                     <div class="rating">
@@ -258,11 +264,13 @@
                     <h3>Mark Smith</h3>
                 </div>
                 <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
                     <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. 
                         lorem Ipsum  has been the industry's standard dummy text ever</p>
                     <div class="rating">
                         <span class="material-icons">
                             </span>
+                        <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -337,5 +345,20 @@
        <div class="copyright"> <p>Copyright 2021 - Yash Sonare</p></div>
     </div>
 </div>
+<!-- JS for toggle Menu-->
+     <script>
+         var Menu_items = document.getElementById("Menu_items");
+         Menu_items.style.maxHeight = "0px"
+
+         function menutoggle(){
+             if (Menu_items.style.maxHeight == "0px") 
+             {
+                Menu_items.style.maxHeight = "200px";
+             }
+             else {
+                Menu_items.style.maxHeight = "0px";
+             }
+         }
+     </script>
 </body>
 </html>
