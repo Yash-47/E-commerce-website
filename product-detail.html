@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -31,6 +32,50 @@
 
             </div>
         </div>
+
+<!-- Single Product Details -->
+    <div class="small-container single_product">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/gallery-1.jpg" width="100%" id="Product_img">
+
+                <div class="small_img_row">
+                    <div class="small_img_col">
+                        <img src="images/gallery-1.jpg" width="100%" class="SmallImg">
+                    </div>
+                    <div class="small_img_col">
+                        <img src="images/gallery-2.jpg" width="100%" class="SmallImg">
+                    </div>
+                    <div class="small_img_col">
+                        <img src="images/gallery-3.jpg" width="100%" class="SmallImg">
+                    </div>
+                    <div class="small_img_col">
+                        <img src="images/gallery-4.jpg" width="100%" class="SmallImg">
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <p>Casual / T-Shirt</p>
+                <h1>Red Printed T-SHirt By HRX</h1>
+                <h4>$50.00</h4>
+                <select>
+                    <option>Select Size</option>
+                    <option>XXL</option>
+                    <option>XL</option>
+                    <option>Large</option>
+                    <option>Medium</option>
+                    <option>Small</option>
+                </select>
+                <input type="number" value="1">
+                <a href="" class="btn">Add to Cart</a>
+                <h3>Product Details <i class="fa fa-indent"></i></h3>
+                <br>
+                <p>Give your summmer a wardrobe style upgrade with the HRX Men's active T-shirt. Team it with a pair 
+                    of Shorts for you morning workout or a denims for evening out with guys. </p>
+            </div>
+
+        </div>
+    </div>
 
     <div class="small-container">
 
@@ -163,5 +208,24 @@
              }
          }
      </script>
+<!-- JS For Product Gallery -->
+<script>
+    var Product_img = document.getElementById("Product_img");
+    var SmallImg = document.getElementsByClassName("SmallImg");
+
+        SmallImg[0].onclick = function(){
+            Product_img.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function(){
+            Product_img.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function(){
+            Product_img.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function(){
+            Product_img.src = SmallImg[3].src;
+        }
+</script>
+    
 </body>
 </html>
