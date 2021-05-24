@@ -16,7 +16,7 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                 <a href="index.html"><img src="images/logo.png" width="125px"></a>
+                    <a href="index.html"><img src="images/logo.png" width="125px"></a>
                 </div>
                 <nav>
                     <ul id="Menu_items">
@@ -27,86 +27,46 @@
                         <li><a href="account.html">Account</a></li>
                     </ul>
                 </nav>
-                <img src="images/cart.png" width="30px" height="30px">
+                <div class="cart_img">
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+                    </div>
                 <img src="images/menu.png" class="menu-icon" onclick=menutoggle()>
 
             </div>
         </div>
-<!-- Cart Item Details -->
-        <div class="small-container cart_page">
-            <table>
-                <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Sub-Total</th>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="cart_info">
-                            <img src="images/buy-1.jpg">
-                            <div>
-                                <p>Printed T-Shirt</p>
-                                <small>$50.00</small>
-                                <br>
-                                <a href="">Remove</a>
-                            </div>
-                        </div>
-                    </td>
-                    <td><input type="number" value="1"></td>
-                    <td>$50.00</td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="cart_info">
-                            <img src="images/buy-2.jpg">
-                            <div>
-                                <p>Casual Shoes</p>
-                                <small>$75.00</small>
-                                <br>
-                                <a href="">Remove</a>
-                            </div>
-                        </div>
-                    </td>
-                    <td><input type="number" value="1"></td>
-                    <td>$75.00</td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="cart_info">
-                            <img src="images/buy-3.jpg">
-                            <div>
-                                <p>Trousers</p>
-                                <small>$35.00</small>
-                                <br>
-                                <a href="">Remove</a>
-                            </div>
-                        </div>
-                    </td>
-                    <td><input type="number" value="1"></td>
-                    <td>$35.00</td>
-                </tr>
-                
-            </table>
-            <div class="total_price">
 
-                <table>
-                <tr>
-                    <td>Sub-Total</td>
-                    <td>$200.00</td>     
-                </tr>
-                <tr>
-                    <td>Tax</td>
-                    <td>$35.00</td>                                               
-                </tr>
-                <tr>
-                    <td>Total</td>
-                    <td>$235.00</td>     
-                </tr>
-                </table>
-
+<!-- Account Page -->
+<div class="account_page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/image1.png" width="100%">
             </div>
+            <div class="col-2">
+                <div class="form_container">
+                    <div class="form_btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register ()">Register</span>
+                        <hr id="indicator">    
+                    </div>
+                    <form id="Login_form"> 
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href=""> Forgot Password?</a>
+                    </form>
+                    <form id="Reg_form">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="E-mail">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+            
         </div>
-
+    </div>
+</div>
 
 <!--- Footer -->
 <div class="footer">
@@ -121,7 +81,7 @@
                 </div>
             </div>
             <div class="footer_col_2">
-                <a href="index.html"><img src="images/logo-white.png"></a>
+                <img src="images/logo-white.png">
                 <p>Our Purpose Is To Sustainably Make The Pleasure And Benfits Of Sports Accessible 
                     To The Many.
                 </p>
@@ -164,7 +124,26 @@
              }
          }
      </script>
+<!-- JS for toggle form -->
+<script>
 
+    var Login_form = document.getElementById("Login_form");
+    var Reg_form = document.getElementById("Reg_form");
+    var indicator = document.getElementById("indicator");
+     
+     function register(){
+         Reg_form.style.transform = "translateX(0px)";
+         Login_form.style.transform = "translateX(0px)";
+         indicator.style.transform = "translateX(100px)";
+
+     }
+     function login(){
+         Reg_form.style.transform = "translateX(300px)";
+         Login_form.style.transform = "translateX(300px)";
+         indicator.style.transform = "translateX(00px)";
+     }
+ 
+</script>
     
 </body>
 </html>
